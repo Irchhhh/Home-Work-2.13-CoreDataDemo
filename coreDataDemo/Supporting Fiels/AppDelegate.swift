@@ -22,7 +22,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UINavigationController(rootViewController: TaskListTableViewController())
         return true
     }
-
-   
 }
 

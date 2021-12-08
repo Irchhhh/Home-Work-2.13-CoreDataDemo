@@ -9,6 +9,7 @@ import Foundation
 import CoreData
 
 class StorageManager {
+    
     static let shared = StorageManager()
     static let context = shared.persistentContainer.viewContext
     
@@ -21,8 +22,8 @@ class StorageManager {
         })
         return container
     }()
-
-   static func saveContext () {
+    
+    static func saveContext () {
         if self.context.hasChanges {
             do {
                 try context.save()
@@ -32,6 +33,4 @@ class StorageManager {
             }
         }
     }
-
-
 }

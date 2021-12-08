@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		8C11F5F4276106A4003E9FA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11F5F3276106A4003E9FA9 /* AppDelegate.swift */; };
-		8C11F5F6276106A4003E9FA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11F5F5276106A4003E9FA9 /* SceneDelegate.swift */; };
-		8C11F5F8276106A4003E9FA9 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11F5F7276106A4003E9FA9 /* TaskListViewController.swift */; };
 		8C11F5FE276106A4003E9FA9 /* coreDataDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C11F5FC276106A4003E9FA9 /* coreDataDemo.xcdatamodeld */; };
 		8C11F600276106A9003E9FA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C11F5FF276106A9003E9FA9 /* Assets.xcassets */; };
 		8C11F603276106A9003E9FA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C11F601276106A9003E9FA9 /* LaunchScreen.storyboard */; };
+		8C11F60D27610BBC003E9FA9 /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11F60C27610BBC003E9FA9 /* TaskListTableViewController.swift */; };
+		8C7D80B027610E4200375813 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D80AF27610E4200375813 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C11F5F0276106A4003E9FA9 /* coreDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coreDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C11F5F3276106A4003E9FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C11F5F5276106A4003E9FA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8C11F5F7276106A4003E9FA9 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		8C11F5FD276106A4003E9FA9 /* coreDataDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreDataDemo.xcdatamodel; sourceTree = "<group>"; };
 		8C11F5FF276106A9003E9FA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C11F602276106A9003E9FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C11F604276106A9003E9FA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C11F60C27610BBC003E9FA9 /* TaskListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
+		8C7D80AF27610E4200375813 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,47 @@
 		8C11F5F2276106A4003E9FA9 /* coreDataDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8C11F5F3276106A4003E9FA9 /* AppDelegate.swift */,
-				8C11F5F5276106A4003E9FA9 /* SceneDelegate.swift */,
-				8C11F5F7276106A4003E9FA9 /* TaskListViewController.swift */,
-				8C11F5FF276106A9003E9FA9 /* Assets.xcassets */,
-				8C11F601276106A9003E9FA9 /* LaunchScreen.storyboard */,
+				8C7D80B12761130B00375813 /* Supporting Fiels */,
+				8C7D80B22761134500375813 /* Services */,
+				8C7D80B32761134F00375813 /* ViewControllers */,
+				8C7D80B42761136A00375813 /* StoryBoards */,
 				8C11F604276106A9003E9FA9 /* Info.plist */,
+				8C11F5FF276106A9003E9FA9 /* Assets.xcassets */,
 				8C11F5FC276106A4003E9FA9 /* coreDataDemo.xcdatamodeld */,
 			);
 			path = coreDataDemo;
+			sourceTree = "<group>";
+		};
+		8C7D80B12761130B00375813 /* Supporting Fiels */ = {
+			isa = PBXGroup;
+			children = (
+				8C11F5F3276106A4003E9FA9 /* AppDelegate.swift */,
+			);
+			path = "Supporting Fiels";
+			sourceTree = "<group>";
+		};
+		8C7D80B22761134500375813 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8C7D80AF27610E4200375813 /* StorageManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8C7D80B32761134F00375813 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C11F60C27610BBC003E9FA9 /* TaskListTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8C7D80B42761136A00375813 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				8C11F601276106A9003E9FA9 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8C11F5EB276106A4003E9FA9 /* Build configuration list for PBXProject "coreDataDemo" */;
+			buildConfigurationList = 8C11F5EB276106A4003E9FA9 /* Build configuration list for PBXProject "CoreDataDemo" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -137,10 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C11F5F8276106A4003E9FA9 /* TaskListViewController.swift in Sources */,
 				8C11F5FE276106A4003E9FA9 /* coreDataDemo.xcdatamodeld in Sources */,
 				8C11F5F4276106A4003E9FA9 /* AppDelegate.swift in Sources */,
-				8C11F5F6276106A4003E9FA9 /* SceneDelegate.swift in Sources */,
+				8C7D80B027610E4200375813 /* StorageManager.swift in Sources */,
+				8C11F60D27610BBC003E9FA9 /* TaskListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +363,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8C11F5EB276106A4003E9FA9 /* Build configuration list for PBXProject "coreDataDemo" */ = {
+		8C11F5EB276106A4003E9FA9 /* Build configuration list for PBXProject "CoreDataDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C11F605276106A9003E9FA9 /* Debug */,

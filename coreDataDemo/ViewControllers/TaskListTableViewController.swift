@@ -6,14 +6,15 @@
 //
 
 import UIKit
-import CoreData
 
 class TaskListTableViewController: UITableViewController {
 
+    //MARK: - Private Properties
     private let context = StorageManager.context
-    
     private var taskList: [Task] = []
     private let cellID = "task"
+     
+    //MARK: - Life Cycles Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +22,15 @@ class TaskListTableViewController: UITableViewController {
         view.backgroundColor = .white
         title = "Task List"
         setupNavigationBar()
-
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchData()
         tableView.reloadData()
     }
+    
+    //MARK: - Private Methods
 
     private func setupNavigationBar() {
         title = "Task List"
@@ -104,13 +106,10 @@ class TaskListTableViewController: UITableViewController {
             }
         }
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let title = taskList[indexPath.row].title else { return }
-            
-        showAlert(with: title, and: "Update?")
-    }
+  
 }
 
+ //MARK: - Extensions
 extension TaskListTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         taskList.count
@@ -139,6 +138,12 @@ extension TaskListTableViewController {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let title = taskList[indexPath.row].title else { return }
+            
+        showAlert(with: title, and: "Update?")
     }
 }
 
